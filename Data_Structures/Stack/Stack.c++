@@ -5,7 +5,7 @@ int arr[100], n=100, top =-1, x;
 
 void push(){
 
-    cout<<"Enter the value to b pushed "<<endl;
+    
     cin>>x;
 
     if(top >= n-1){
@@ -39,11 +39,13 @@ int main(){
 
     cout<<"1.Push \n2.Pop\n3.Display\n4.Exit"<<endl;
 
-    cin>>choice;
+    
 
     do{
+        cin>>choice;
         switch(choice){
             case 1:
+             cout<<"Enter the value to be pushed "<<endl;
              push();
              break;
             case 2:
