@@ -35,3 +35,6 @@ int main() {
 
     return 0;
 }
+
+
+// Note About the pointers 
