@@ -3,24 +3,38 @@
 
 using namespace std;
 
-int main () {
+int main() {
+    string str = "Hello, World!";
 
-   string str1 = "Hello";
-   string str2 = "World";
-   string str3;
-   int  len ;
+    // Get the length of the string
+    cout << "Length of the string: " << str.length() << endl;
 
-   // copy str1 into str3
-   str3 = str1;
-   cout << "str3 : " << str3 << endl;
+    // Check if the string is empty
+    if (str.empty()) {
+        cout << "The string is empty" << endl;
+    } else {
+        cout << "The string is not empty" << endl;
+    }
 
-   // concatenates str1 and str2
-   str3 = str1 + str2;
-   cout << "str1 + str2 : " << str3 << endl;
+    // Append additional characters to the string
+    str.append(" Welcome");
+    cout << "Appended string: " << str << endl;
 
-   // total length of str3 after concatenation
-   len = str3.size();
-   cout << "str3.size() :  " << len << endl;
+    // Get a substring of the string
+    string substr = str.substr(7, 5); // starting at index 7, take 5 characters
+    cout << "Substring: " << substr << endl;
 
-   return 0;
+    // Find the position of a substring within the string
+    size_t pos = str.find("World");
+    if (pos != string::npos) {
+        cout << "Found 'World' at position: " << pos << endl;
+    } else {
+        cout << "Substring not found" << endl;
+    }
+
+    // Erase a portion of the string
+    str.erase(5, 7); // starting at index 5, erase 7 characters
+    cout << "String after erasing: " << str << endl;
+
+    return 0;
 }
